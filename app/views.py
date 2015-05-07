@@ -6,5 +6,6 @@ from app.forms import LoginForm
 @app.route('/index')
 def index():
     loginform=LoginForm()
+    
     return render_template('splash.html', loginform=loginform)
 

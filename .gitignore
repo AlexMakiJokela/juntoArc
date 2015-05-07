@@ -1,1 +1,3 @@
 juntoArc/*
+*.pyc
+app/*.pyc
