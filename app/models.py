@@ -16,8 +16,10 @@ class Question(db.Model):
 	daily_time = db.Column(db.Time())
 	state = db.Column(db.Integer())
 
-	def __init__(self, question_text):
+	def __init__(self, question_text, daily_time):
 		self.question_text=question_text
+		self.created_datetime=datetime.datetime.now()
+		self.daily_time=daily_time
 
 
 class Response(db.Model):

@@ -1,0 +1,21 @@
+<html>
+  <head>
+
+    <title>JuntoArc</title>
+
+
+  </head>
+  <body>
+  	     <form action="" method="post" name="login">
+        {{loginform.phone(size=10, placeholder="Phone Number")}}
+        {% for error in loginform.errors.email %}
+            <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+    <br>
+        {{loginform.password(size=25, placeholder="Password")}}
+        {% for error in loginform.errors.password %}
+            <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+    <p><input type="submit" name="btn" class="btn" value="Log In"></p>
+</form>
+</body>
